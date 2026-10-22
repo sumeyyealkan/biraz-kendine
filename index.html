@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f0ec">
+  <meta name="description" content="Kendine ayırabildiğin birkaç dakika için küçük ve nazik molalar.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Biraz Kendine</title>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark" aria-hidden="true">♡</div>
+      <p class="eyebrow">KENDİNE KÜÇÜK BİR MOLA</p>
+      <h1>Biraz kendine kalmak ister misin?</h1>
+      <p class="intro">Her şeyi hemen çözmek zorunda değilsin. Şu an sana iyi gelebilecek küçük bir adım seçebilirsin.</p>
+    </header>
+
+    <section id="home" aria-labelledby="choose-title">
+      <h2 id="choose-title">Şu an neye ihtiyacın var?</h2>
+      <div class="choices">
+        <button class="choice" data-guide="overwhelmed"><span class="emoji">🌿</span><span><strong>Çok bunaldım</strong><small>Biraz sakinleşmek istiyorum</small></span><span class="arrow">›</span></button>
+        <button class="choice" data-guide="rest"><span class="emoji">☕</span><span><strong>Biraz dinlenmek</strong><small>Kendime kısa bir mola</small></span><span class="arrow">›</span></button>
+        <button class="choice" data-guide="move"><span class="emoji">🌱</span><span><strong>Biraz hareket etmek</strong><small>Kısa ve nazik hareketler</small></span><span class="arrow">›</span></button>
+        <button class="choice" data-guide="care"><span class="emoji">🫧</span><span><strong>Kendime bakım</strong><small>Bugün kendim için küçük bir şey</small></span><span class="arrow">›</span></button>
+        <button class="choice" data-guide="baby"><span class="emoji">🤍</span><span><strong>Bebeğim ağlıyor</strong><small>Güvenli ilk kontroller</small></span><span class="arrow">›</span></button>
+      </div>
+      <p class="offline-note"><span class="dot"></span> Temel rehberler internet olmadan da kullanılacak şekilde hazırlandı.</p>
+    </section>
+
+    <section id="guide" class="guide hidden" aria-live="polite">
+      <button id="back" class="back">‹ Ana sayfaya dön</button>
+      <p id="guide-kicker" class="eyebrow">KÜÇÜK BİR MOLA</p>
+      <h2 id="guide-title"></h2>
+      <p id="guide-intro" class="guide-intro"></p>
+      <div id="steps" class="steps"></div>
+      <div class="guide-actions">
+        <button id="next" class="primary">Sonraki adım</button>
+        <button id="finish" class="secondary">Şimdilik bu kadar</button>
+      </div>
+      <p id="progress" class="progress"></p>
+    </section>
+
+    <section id="done" class="done hidden" aria-live="polite">
+      <div class="done-heart">♡</div>
+      <h2>Kendine ayırdığın bu an değerli.</h2>
+      <p>Her şeyi tamamlamak zorunda değilsin. İstersen burada kalabilir, istersen başka bir küçük mola seçebilirsin.</p>
+      <button id="again" class="primary">Ana sayfaya dön</button>
+    </section>
+
+    <footer>
+      <p>Bu alan sana destek olmak için var; yapılacak yeni bir görev listesi değil.</p>
+      <p class="tiny">Bilgilendirme: Bu uygulama sağlık uzmanı desteğinin yerine geçmez. Acil tehlike varsa yerel acil yardım hizmetlerine başvur.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
