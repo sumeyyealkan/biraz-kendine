@@ -1,1 +1,1 @@
-{"name": "Biraz Kendine", "short_name": "Biraz Kendine", "start_url": "./", "display": "standalone", "background_color": "#fcf8f4", "theme_color": "#f9f4f0", "lang": "tr"}
+{"name":"Biraz Kendine","short_name":"Biraz Kendine","start_url":"./","display":"standalone","background_color":"#fff8f3","theme_color":"#fbf4ef","lang":"tr","icons":[{"src":"ikon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

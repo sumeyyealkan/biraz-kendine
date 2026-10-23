@@ -1,1 +1,9 @@
-GitHub deposunda eski index.html dosyasını bu index.html ile değiştirin. anne_bebek.jpg, manifest.json ve service-worker.js dosyalarını depo kök dizinine yükleyin. Eski stil.css ve uygulama.js dosyaları yeni sürümde kullanılmaz. Sayfayı yenileyin. Fotoğraf herkese açık olacaktır; yayımlamadan önce bunu değerlendirin.
+BIRAZ KENDINE - YENI SURUM
+1. ZIP dosyasini telefonunda ac ve icindeki dosyalari cikar.
+2. GitHub'da sumeyyealkan/biraz-kendine deposunu ac.
+3. Add file > Upload files seceneginden ZIP'in kendisini DEGIL, icindeki 9 dosyanin tamamini yukle.
+4. Commit changes ile kaydet. Ayni isimli eski dosyalarin ustune yazilmasi gerekir.
+5. Biraz bekle, sonra https://sumeyyealkan.github.io/biraz-kendine/ adresini ac.
+6. Eski gorunum kalirsa sayfayi yenile veya tarayicinin site verilerini temizle.
+NOT: Bu iki fotograf herkese acik web sitesinde gorunecek.
+NOT: Google yazitipleri internet baglantisinda daha guzel gorunur; internet yoksa yedek font kullanilir.
