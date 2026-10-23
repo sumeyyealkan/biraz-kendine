@@ -1,18 +1,1 @@
-{
-  "name": "Biraz Kendine",
-  "short_name": "Biraz Kendine",
-  "description": "Kendine ayırabildiğin birkaç dakika için küçük molalar.",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#fbf6f2",
-  "theme_color": "#f8f0ec",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ]
-}
+{"name": "Biraz Kendine", "short_name": "Biraz Kendine", "start_url": "./", "display": "standalone", "background_color": "#fcf8f4", "theme_color": "#f9f4f0", "lang": "tr"}

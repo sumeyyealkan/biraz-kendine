@@ -1,0 +1,1 @@
+GitHub deposunda eski index.html dosyasını bu index.html ile değiştirin. anne_bebek.jpg, manifest.json ve service-worker.js dosyalarını depo kök dizinine yükleyin. Eski stil.css ve uygulama.js dosyaları yeni sürümde kullanılmaz. Sayfayı yenileyin. Fotoğraf herkese açık olacaktır; yayımlamadan önce bunu değerlendirin.

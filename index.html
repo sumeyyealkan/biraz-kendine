@@ -1,60 +1,52 @@
 <!doctype html>
-<html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f0ec">
-  <meta name="description" content="Kendine ayırabildiğin birkaç dakika için küçük ve nazik molalar.">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="stil.css">
-  <title>Biraz Kendine</title>
-</head>
-<body>
-  <main class="app">
-    <header class="top">
-      <div class="brand-mark" aria-hidden="true">♡</div>
-      <p class="eyebrow">KENDİNE KÜÇÜK BİR MOLA</p>
-      <h1>Biraz kendine kalmak ister misin?</h1>
-      <p class="intro">Her şeyi hemen çözmek zorunda değilsin. Şu an sana iyi gelebilecek küçük bir adım seçebilirsin.</p>
-    </header>
-
-    <section id="home" aria-labelledby="choose-title">
-      <h2 id="choose-title">Şu an neye ihtiyacın var?</h2>
-      <div class="choices">
-        <button class="choice" data-guide="overwhelmed"><span class="emoji">🌿</span><span><strong>Çok bunaldım</strong><small>Biraz sakinleşmek istiyorum</small></span><span class="arrow">›</span></button>
-        <button class="choice" data-guide="rest"><span class="emoji">☕</span><span><strong>Biraz dinlenmek</strong><small>Kendime kısa bir mola</small></span><span class="arrow">›</span></button>
-        <button class="choice" data-guide="move"><span class="emoji">🌱</span><span><strong>Biraz hareket etmek</strong><small>Kısa ve nazik hareketler</small></span><span class="arrow">›</span></button>
-        <button class="choice" data-guide="care"><span class="emoji">🫧</span><span><strong>Kendime bakım</strong><small>Bugün kendim için küçük bir şey</small></span><span class="arrow">›</span></button>
-        <button class="choice" data-guide="baby"><span class="emoji">🤍</span><span><strong>Bebeğim ağlıyor</strong><small>Güvenli ilk kontroller</small></span><span class="arrow">›</span></button>
-      </div>
-      <p class="offline-note"><span class="dot"></span> Temel rehberler internet olmadan da kullanılacak şekilde hazırlandı.</p>
-    </section>
-
-    <section id="guide" class="guide hidden" aria-live="polite">
-      <button id="back" class="back">‹ Ana sayfaya dön</button>
-      <p id="guide-kicker" class="eyebrow">KÜÇÜK BİR MOLA</p>
-      <h2 id="guide-title"></h2>
-      <p id="guide-intro" class="guide-intro"></p>
-      <div id="steps" class="steps"></div>
-      <div class="guide-actions">
-        <button id="next" class="primary">Sonraki adım</button>
-        <button id="finish" class="secondary">Şimdilik bu kadar</button>
-      </div>
-      <p id="progress" class="progress"></p>
-    </section>
-
-    <section id="done" class="done hidden" aria-live="polite">
-      <div class="done-heart">♡</div>
-      <h2>Kendine ayırdığın bu an değerli.</h2>
-      <p>Her şeyi tamamlamak zorunda değilsin. İstersen burada kalabilir, istersen başka bir küçük mola seçebilirsin.</p>
-      <button id="again" class="primary">Ana sayfaya dön</button>
-    </section>
-
-    <footer>
-      <p>Bu alan sana destek olmak için var; yapılacak yeni bir görev listesi değil.</p>
-      <p class="tiny">Bilgilendirme: Bu uygulama sağlık uzmanı desteğinin yerine geçmez. Acil tehlike varsa yerel acil yardım hizmetlerine başvur.</p>
-    </footer>
-  </main>
-  <script src="uygulama.js"></script>
-</body>
-</html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f9f4f0"><meta name="description" content="Kendine küçük bir mola. Sakin, nazik ve ücretsiz destek.">
+<link rel="manifest" href="manifest.json"><title>Biraz Kendine</title>
+<style>
+:root{--cream:#fcf8f4;--ink:#243e36;--muted:#4e605a;--pink:#f8e4e8;--mint:#e4efe8;--green:#537b67;--border:#e9dfdb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e9e8e4;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.5}
+.app{max-width:520px;margin:auto;min-height:100dvh;background:var(--cream);padding-bottom:90px;box-shadow:0 0 40px #00000012}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #815fa0;outline-offset:3px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:17px 22px 4px}.brand{font-family:Georgia,serif;font-size:20px}.heart{color:#b76582;font-size:23px}
+.hero{margin:10px 14px 20px;padding:27px 24px 25px;border-radius:29px;background:linear-gradient(145deg,#fff9f6 12%,#eaf2e9 75%,#f9e7ec);position:relative;overflow:hidden;min-height:285px}
+.floral{position:absolute;right:-13px;top:0;font-size:41px;line-height:1.35;letter-spacing:-7px;opacity:.85;transform:rotate(-8deg);pointer-events:none}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(40px,10vw,55px);line-height:1.03;letter-spacing:-1.5px;margin:12px 0 10px;position:relative}.hero .tag{font-family:Georgia,serif;font-size:17px}.hero p{background:#ffffffa8;border-radius:16px;padding:13px 15px;max-width:290px;position:relative;font-size:16px;color:#30483e}
+.section{padding:0 17px}.section h2,.page h2{font-family:Georgia,serif;font-weight:400;font-size:32px;line-height:1.15;margin:20px 0 8px}.section-sub{color:var(--muted);margin:0 0 18px}.choices{display:grid;gap:11px}.choice,.subchoice{display:flex;align-items:center;text-align:left;gap:14px;width:100%;border:1px solid #ffffff;background:linear-gradient(110deg,#fffdfa,#f9e6e7);border-radius:19px;padding:15px 14px;box-shadow:0 5px 15px #543c3a10;color:var(--ink)}
+.choice:nth-child(odd){background:linear-gradient(110deg,#fffdfa,#edf4eb)}.emoji{font-size:30px;min-width:39px;text-align:center}.choice strong,.subchoice strong{display:block;font-size:17px}.choice small,.subchoice small{display:block;font-size:14px;color:var(--muted)}.arrow{margin-left:auto;font-size:24px;color:#58786a}
+.page{padding:5px 18px 25px}.back{border:0;background:transparent;color:var(--ink);font-size:17px;padding:8px 0}.page h2{text-align:center;margin:10px 0 2px}.subtitle{text-align:center;color:var(--muted);margin:0 0 16px}.banner{width:100%;max-height:360px;object-fit:cover;object-position:center 39%;border-radius:23px;display:block}.flowers-strip{text-align:center;font-size:35px;letter-spacing:8px;padding:20px 0;background:linear-gradient(120deg,#f5e7eb,#e6f0e9);border-radius:23px}.intro{font-size:16px;margin:17px 4px;color:#334b41}.panel{background:#fff8f5;border:1px solid #fff;border-radius:24px;padding:18px;margin-top:16px;box-shadow:0 5px 16px #543c3a0c}.panel h3{font-family:Georgia,serif;font-size:24px;font-weight:400;margin:0 0 10px}.step{background:#eaf2eb;border-radius:16px;padding:17px;font-size:17px;margin:13px 0}.progress{font-size:14px;color:var(--muted)}.actions{display:flex;gap:9px;flex-wrap:wrap}.primary,.secondary{border:0;border-radius:30px;padding:13px 19px;font-weight:600}.primary{background:#557d67;color:white}.secondary{background:#f4dfe5;color:#3f554a}.notice{font-size:13px;color:#4f6259;background:#f0f2ed;border-radius:15px;padding:12px 14px;margin:16px 0}.end{text-align:center;padding:40px 15px}.end h2{font-size:40px}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);background:#fffbf7f5;border-top:1px solid #e8ded8;display:flex;justify-content:space-around;padding:10px 8px max(12px,env(safe-area-inset-bottom));z-index:2;backdrop-filter:blur(8px)}.nav button{background:transparent;border:0;color:#425b4d;font-size:13px;display:flex;align-items:center;flex-direction:column;gap:2px}.nav span{font-size:22px}.hidden{display:none!important}
+</style></head><body><div class="app">
+<header class="top"><div class="brand">✿ Biraz Kendine</div><div class="heart">♡</div></header>
+<main id="home">
+<div class="hero"><div class="floral" aria-hidden="true">🌿<br>🌸<br>🌷<br>💜</div><div class="tag">Küçük bir mola, büyük bir iyilik…</div><h1>Biraz<br>Kendine</h1><p>Her şeyi hemen çözmek zorunda değilsin. Şu an sana iyi gelebilecek küçük bir adım seçebilirsin. ♡</p></div>
+<div class="section"><h2>Şu an neye ihtiyacın var?</h2><p class="section-sub">Birini seç, kendine birkaç dakika ayır.</p><div class="choices">
+<button class="choice" data-open="overwhelmed"><span class="emoji">🌿</span><span><strong>Çok bunaldım</strong><small>Biraz sakinleşmek istiyorum</small></span><span class="arrow">›</span></button>
+<button class="choice" data-open="rest"><span class="emoji">☕</span><span><strong>Biraz dinlenmek</strong><small>Kendime kısa bir mola</small></span><span class="arrow">›</span></button>
+<button class="choice" data-open="move"><span class="emoji">🌸</span><span><strong>Biraz hareket etmek</strong><small>Kısa ve nazik hareketler</small></span><span class="arrow">›</span></button>
+<button class="choice" data-open="care"><span class="emoji">🪞</span><span><strong>Kendime bakım</strong><small>Bugün kendim için küçük bir şey</small></span><span class="arrow">›</span></button>
+<button class="choice" data-open="baby"><span class="emoji">🤍</span><span><strong>Bebeğim ağlıyor</strong><small>Güvenli ilk kontroller</small></span><span class="arrow">›</span></button>
+</div><p class="notice">🌷 Küçük molalar için tasarlandı. İçerik genel bilgilendirme amaçlıdır.</p></div>
+</main>
+<main id="detail" class="page hidden"><button class="back" id="back">‹ Ana sayfaya dön</button><h2 id="detailTitle"></h2><p class="subtitle" id="detailSubtitle"></p><div id="detailImage"></div><p class="intro" id="detailIntro"></p><div class="panel"><h3 id="guideHeading">Küçük bir mola 🌿</h3><p class="progress" id="progress"></p><div class="step" id="step"></div><div class="actions"><button class="primary" id="next">Sonraki adım →</button><button class="secondary" id="finish">Şimdilik bu kadar</button></div></div><p class="notice" id="safety"></p></main>
+<main id="done" class="page hidden"><div class="end"><div class="flowers-strip">🌸 🌿 💜</div><h2>Kendine ayırdığın bu an değerli. ♡</h2><p>Her şeyi tamamlamak zorunda değilsin. İstersen başka bir küçük mola seçebilirsin.</p><button class="primary" id="again">⌂ Ana sayfaya dön</button></div></main>
+<nav class="nav"><button id="navHome"><span>⌂</span>Ana sayfa</button><button id="navStory"><span>♡</span>Hikâyemiz</button><button id="navInfo"><span>✿</span>Bilgi</button></nav>
+</div>
+<script>
+"use strict";
+const guides={
+overwhelmed:{title:"Biraz sakinleşelim",sub:"Bu an sadece sana ait",intro:"Kendini güvende hissettiğin bir yerde birkaç dakika ayırabilirsin.",steps:["Ayaklarının yere temasını hisset. Omuzlarını gevşet.","Nefesini zorlamadan, rahat ettiğin gibi nefes alıp ver.","Etrafında gördüğün üç şeyi fark et.","İstersen yüzünü yıka veya biraz su iç."]},
+rest:{title:"Biraz dinlenmek",sub:"Kendime kısa bir mola",intro:"Yoğun bir günün içinde küçük bir dinlenme anı da değerlidir.",steps:["Mümkünse rahat bir yere otur.","Omuzlarını gevşet ve etrafındaki sesleri fark et.","Kendine kısa bir sessizlik veya sevdiğin bir içecek armağan et.","Bugün yaptığın güzel bir şeyi hatırla."]},
+move:{title:"Biraz hareket etmek",sub:"Kısa ve nazik hareketler",intro:"Büyük değişimler küçük adımlarla başlar. Yalnızca rahat ettiğin kadar hareket et.",steps:["Omuzlarını yavaşça çevir.","Kollarını nazikçe uzatıp bırak.","İstersen evde kısa bir yürüyüş yap.","Ağrı veya baş dönmesi olursa dur."]},
+care:{title:"Kendime bakım",sub:"Bugün kendim için küçük bir şey",intro:"Kendine iyi bakmak lüks değil; bazen minicik bir moladır.",steps:["Yüzünü veya ellerini nazikçe temizle.","Sevdiğin bir nemlendiriciyi kullanabilirsin.","Saçını tara veya bir bardak su iç.","Kendine iyi gelen bir cümle seç."]},
+baby:{title:"Bebeğim ağlıyor",sub:"Güvenli ilk kontroller",intro:"Bebeğinin ağlaması seni endişelendirebilir. Önce sakinlikle ve birlikte kontrol edelim.",steps:["Bebeğinin nefesini, rengini ve tepkilerini kontrol et. Nefes güçlüğü, morarma veya tepkisizlik varsa hemen acil yardım iste.","Açlık, bez, gaz, sıcaklık ve rahatsızlık gibi ihtiyaçlarını kontrol et.","Bebeğini güvenli biçimde kucağına alıp yumuşak sesle konuşabilirsin. Bebeği asla sarsma.","Çok bunaldıysan bebeği sırtüstü, boş ve güvenli bir beşiğe bırakıp kısa süre destek iste.","Üç aydan küçük bebekte 38°C ve üzeri ateş veya ciddi hastalık belirtisi varsa hemen tıbbi değerlendirme al."]}
+};
+const el=id=>document.getElementById(id);let current=null,idx=0;
+function show(which){for(const id of ["home","detail","done"])el(id).classList.toggle("hidden",id!==which);window.scrollTo(0,0);}
+function render(){let g=guides[current];el("progress").textContent=`${idx+1} / ${g.steps.length}`;el("step").textContent=g.steps[idx];el("next").textContent=idx===g.steps.length-1?"Molayı tamamla ♡":"Sonraki adım →";}
+function openGuide(key){current=key;idx=0;let g=guides[key];el("detailTitle").textContent=g.title;el("detailSubtitle").textContent=g.sub;el("detailIntro").textContent=g.intro;el("detailImage").innerHTML=key==="baby"?'<img class="banner" src="anne_bebek.jpg" alt="Anne ve yenidoğan bebeğin sıcak bir anını gösteren pastel düzenleme">':'<div class="flowers-strip" aria-hidden="true">🌸 🌿 💜 🌷</div>';el("safety").textContent=key==="baby"?"Bu bilgiler tıbbi değerlendirme yerine geçmez. Acil belirtilerde 112’yi ara.":"Kendini zorlamak zorunda değilsin; ihtiyaç duyduğunda destek iste.";render();show("detail");}
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>openGuide(b.dataset.open)));
+el("next").addEventListener("click",()=>{if(idx===guides[current].steps.length-1)show("done");else{idx++;render();}});
+el("finish").addEventListener("click",()=>show("done"));el("back").addEventListener("click",()=>show("home"));el("again").addEventListener("click",()=>show("home"));el("navHome").addEventListener("click",()=>show("home"));
+el("navStory").addEventListener("click",()=>{el("detailTitle").textContent="Bu uygulamanın hikâyesi";el("detailSubtitle").textContent="Bir annenin küçük mola arayışından…";el("detailIntro").textContent="Yoğun günlerde kendine birkaç dakika ayırmak isteyen kadınlar için sevgiyle hazırlandı.";el("detailImage").innerHTML='<div class="flowers-strip">🌸 🌿 💜</div>';el("guideHeading").textContent="Küçük molalar, büyük iyiliklerdir.";el("progress").textContent="";el("step").textContent="Bu uygulama herkes için ücretsiz ve sade bir destek alanı olmayı amaçlıyor.";el("next").classList.add("hidden");el("finish").classList.add("hidden");el("safety").textContent="";show("detail");});
+el("navInfo").addEventListener("click",()=>{alert("Biraz Kendine ücretsiz bir destek uygulamasıdır. Tıbbi tavsiye veya acil yardım hizmeti değildir. Acil durumda 112’yi arayın.");});
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{el("guideHeading").textContent="Küçük bir mola 🌿";el("next").classList.remove("hidden");el("finish").classList.remove("hidden");}));
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));}
+</script></body></html>
